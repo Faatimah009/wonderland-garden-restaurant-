@@ -1,0 +1,10 @@
+.nav-link {
+  color: white;
+  text-transform:uppercase;
+}
+.nav-link:hover {
+  color: yellow;
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
