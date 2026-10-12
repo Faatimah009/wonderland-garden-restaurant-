@@ -1,13 +1,22 @@
 import React from "react";
-import kachi from "../assets/car.jpg";
-const Hero = () => {
+import Carousel from "react-bootstrap/Carousel";
+import slide001 from "../public/image/slider/slide001.png;"
+import slidenext from "../public/image/slider/slidenext.jpg";
+import slidenew from "../public/image/slider/slidenew.jpg";
+function Hero() {
   return (
-    <div>
-      Hero
-      <img src={kachi} alt="car" width="300px" height="auto" />
-      <img src="image/carr.jpg" alt="car" width="300px" height="auto" />
-    </div>
+    <Carousel slide={false}>
+      <Carousel.Item>
+        <img src={slide001} alt="" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={slidenext} alt="" />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={slidenew} alt="" />
+      </Carousel.Item>
+    </Carousel>
   );
-};
+}
 
 export default Hero;

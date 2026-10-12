@@ -1,26 +1,24 @@
-import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import "./test.css";
-import { BrowserRouter,Routes, Route } from "react-router-dom";
-import Cart from "./pages/cart";
-import Menu from "./pages/Menu";
+import NavbarMenu from "./components/Navbar";
+import Footer from "./components/Footer";
+import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
-import Navbar from "./components/Navbar";
+
+
 const App = () => {
   return (
-    <div>
-      <Navbar />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <NavbarMenu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 };
 
