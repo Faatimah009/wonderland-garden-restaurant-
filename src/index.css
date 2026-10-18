@@ -24,11 +24,41 @@ svg {
   padding: 3rem;
   width: 50%;
 }
-.carousel-caption button{
- background-color: rgba(255, 127, 80, 0.747);
- padding:5px 12px;
-
+.carousel-caption button {
+  background-color: rgba(255, 127, 80, 0.747);
+  padding: 5px 12px;
 }
-.carousel-control-prev,.carousel-control-next{
-  display:none !important;
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+.footer li {
+  list-style-type: none;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+.footer li::before{
+  content:"≫"
+}
+.footer a:hover {
+  text-decoration: none;
+  color: #f58d1d;
+}
+.food-container{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  text-align: center;
+}
+.food-container img{
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  background-image: url("");
+}
+.page-banner{
+  height: 200px;
+  
 }

@@ -4,9 +4,9 @@ import Nav from "react-bootstrap/Nav";
 0;
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { FaCartShopping } from "react-icons/fa6"
-import wonder from "../assets/Logos/wonder.png"
-function NavbarMenu() {
+import { FaCartShopping } from "react-icons/fa6";
+import wonder from "../assets/Logos/wonder.png";
+function NavbarMenu({ CartCount = 0 }) {
   return (
     <>
       <Navbar expand="lg" className="bg-black">
@@ -30,10 +30,8 @@ function NavbarMenu() {
               </NavDropdown>
               <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/cart">
-                
-                Cart
-                <FaCartShopping />
+              <Nav.Link href="/cart" className="d-flex align-item-center gap-2">
+                <FaCartShopping /> Cart<span className="badge bg-danger"> {CartCount}</span>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -24,10 +24,18 @@ function Footer() {
         <Col className="px-5 mb-5">
           <h5>Quicklink</h5>
           <ul className="list-unstyled">
-            <li >Home</li>
-            <li>Our Menu</li>
-            <li>About Us</li>
-            <li>Conntact Us</li>
+            <a href="/" className="text-white text-decoration-none"><li>
+              Home</li>
+            </a>
+            <a href="/menu" className="text-white text-decoration-none"><li>
+              Our Menu
+            </li></a>
+            <a href="/about" className="text-white text-decoration-none">
+             <li> About Us</li>
+            </a>
+            <a href="/contact" className="text-white text-decoration-none">
+              Contact Us
+            </a>
           </ul>
         </Col>
         <Col >
