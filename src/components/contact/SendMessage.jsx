@@ -14,8 +14,8 @@ const SendMessage = () => {
           <p> We'd Love to Hear From You </p>
           </div>
           <Row className="ms-3 py-2">
-          <Col className="p-4 ms-3 px-3 ">
-            <form style={{marginTop:"-30px" , marginLeft:"30px"}}>
+          <Col className="p-4 ms-3 px-3" style={{backgroundColor:"#FAF9F6", borderRadius:"5px"}}>
+            <form style={{  marginLeft:"30px", backgroundColor:"#FAF9F6",}}>
               <div className="row g-2 ">
                 <div className="col-sm-6">
                   <input
@@ -49,7 +49,7 @@ const SendMessage = () => {
                 <div>
                   <button
                     type="submit"
-                    className="btn-yellow w-100 py-3 rounded-pill d-flex gap-2 bg-warning"
+                    className="btn-yellow w-100 py-3 rounded-pill d-flex gap-2 bg-warning text-center"
                   >
                     Send Message <span>&rarr;</span>
                   </button>
