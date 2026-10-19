@@ -49,9 +49,9 @@ const SendMessage = () => {
                 <div>
                   <button
                     type="submit"
-                    className="btn-yellow w-100 py-3 rounded-pill d-flex gap-2 bg-warning text-center"
+                    className="btn-yellow w-100 py-3 rounded-pill d-flex gap-2 bg-warning" style={{justifyContent:"center",alignItems:"center",fontSize:"17px"}}
                   >
-                    Send Message <span>&rarr;</span>
+                    SEND MESSAGE <span>&rarr;</span>
                   </button>
                 </div>
               </div>
