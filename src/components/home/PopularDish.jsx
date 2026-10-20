@@ -1,32 +1,66 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import food from "../../data/food"
-import Foodcard from "../FoodCart"
-const PopularDish = () => {
-      const popularFoods = food.slice(0,6)
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { FaRegStar } from "react-icons/fa";
+import { FaBowlFood } from "react-icons/fa6";
+import { GiChickenOven, GiFrenchFries } from "react-icons/gi";
+import { RiDrinks2Fill } from "react-icons/ri";
 
+// FIX: Corrected import paths relative to this file's folder position
+import FoodCard from "../FoodCard";
+import foods from "../../data/food";
+
+const PopularDishes = () => {
   return (
-     <Container fluid >
-      <Row>
-        <Col md={3}>banner</Col>
-        <Col md={9}>
-        <section>
-          <h6>OUR SPECIALS</h6>
-         <h2> Popular Dishes </h2>
-          <p>Fresh Ingredient, Aunthetic Taste, Always,/</p>
-        </section>
-        <div className="food-container">
-          {popularFoods.map((food) => (
-            <Foodcard key={food.id} food={food}/>
-          ))}
+    <div style={{ display: "flex", gap: "40px" }}>
+      <aside>
+        <ul>
+          <a href="#">
+            <li>
+              <FaRegStar /> Popular
+            </li>
+          </a>
+          <hr />
+          <a href="#">
+            <li>
+              <FaBowlFood /> Jollof Dishes
+            </li>
+          </a>
+          <hr />
+          <a href="#">
+            <li>
+              <GiChickenOven /> Proteins
+            </li>
+          </a>
+          <hr />
+          <a href="#">
+            <li>
+              <GiFrenchFries /> Sides
+            </li>
+          </a>
+          <hr />
+          <a href="#">
+            <li>
+              <RiDrinks2Fill /> Drinks
+            </li>
+          </a>
+        </ul>
+        <hr />
+        <input type="search" placeholder="Search" />
+      </aside>
+
+      <main>
+        <div className="menu-card">
+          <div className="food-grid">
+            {foods.map((food) => (
+              <FoodCard key={food.id} food={food} />
+            ))}
+          </div>
         </div>
-        </Col>
+      </main>
+    </div>
+  );
+};
 
-      </Row>
-    </Container >
-  )
-}
-
-export default PopularDish
+export default PopularDishes;

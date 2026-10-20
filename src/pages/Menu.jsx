@@ -1,18 +1,21 @@
 import React from "react";
-import FoodCart from "../components/FoodCart";
+import PageBanner from "../components/PageBanner";
+import SearchBar from "../components/menu/SearchBar";
+import PopularDishes from "../components/menu/PopularDishes";
 
 const Menu = () => {
   return (
-    <div>
-      <section className=" menu-page">
-        <h1>Our Menu</h1>
-        <div className="food-grid">
-          {foods.map((food) => (
-            <FoodCart key={food.id} food={food} />
-          ))}
-        </div>
-      </section>.l
-    </div>
+    <>
+      <PageBanner
+        title="Our menu"
+        breadcrumb="Home / Menu"
+        image="https://tse2.mm.bing.net/th/id/OIP.DIwQjvF25-U0j4pLnGGd4gHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+      />
+
+      <SearchBar />
+      {/* PopularDishes handles looping and rendering all FoodCards inside it */}
+      <PopularDishes />
+    </>
   );
 };
 
