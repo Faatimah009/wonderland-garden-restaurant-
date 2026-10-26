@@ -643,3 +643,7 @@ select {
         max-height: 280px;
     }
 }
+.nav-link:hover,
+.nav-link:focus {
+    color: #F58D1D;
+}
