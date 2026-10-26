@@ -5,7 +5,7 @@ import PageBanner from "../components/PageBanner";
 
 const Contact = () => {
   return <div><PageBanner title="About us" breadcrumb="Home /About us"
-    image="c:\Users\niyif\Downloads\slide-new.jpeg"/>
+    image="/image/contact-banner.jpeg"/>
     <SendMessage/>
     <FindUs/>
     </div>;

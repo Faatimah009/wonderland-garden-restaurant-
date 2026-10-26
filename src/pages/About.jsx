@@ -10,8 +10,8 @@ const About = () => {
     <div className="grid-reveal-banner">
   <PageBanner 
     title="About us" 
-    breadcrumb="Home / About us" 
-    image="images/Chef%2011.jpg" 
+    breadcrumb="Home/ About us" 
+    image="/image/banner.png" 
   />
 
 

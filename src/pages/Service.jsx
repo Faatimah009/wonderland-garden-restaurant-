@@ -1,23 +1,23 @@
-import React from 'react'
-import PageBanner from '../components/PageBanner'
-import ServiceCategory from '../components/service/ServiceCategory'
-import ServiceProcess from '../components/service/ServiceProcess'
-import RequestQuote from '../components/service/RequestQuote'
-import  "../service.css"
-const Service = () => {
+import React from "react";
+import PageBanner from "../components/PageBanner";
+import ServiceCategory from "../components/service/ServiceCategory";
+import ServiceProcess from "../components/service/ServiceProcess";
+import RequestQuote from "../components/service/RequestQuote";
+import "../service.css";
+
+const Services = () => {
   return (
     <div>
       <PageBanner
-      title="Services" 
-      breadcrumb="Home / About us "
-      image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZGf-GlCJSdr89-hfxAsCUr2gTTbcO2oO479A5d6iZ_surojWxDLNkWdSk&s=10"
+        title="Our Services"
+        breadcrumb="Home / Services"
+        image="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1600&q=80"
       />
-
       <ServiceCategory />
       <ServiceProcess />
       <RequestQuote />
     </div>
-  )
-}
+  );
+};
 
-export default Service
+export default Services;

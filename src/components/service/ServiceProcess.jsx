@@ -1,44 +1,39 @@
-import React from 'react'
+import React from "react";
+import { Container } from "react-bootstrap";
 
-const ServiceProcess = () => {
-      const steps = [
+const steps = [
   { icon: "📞", title: "1. Order Placement", sub: "(Phone/Web)" },
   { icon: "👨‍🍳", title: "2. Meal Preparation", sub: "(Lagos Hub)" },
   { icon: "🚚", title: "3. Delivery & Setup", sub: "(On-Site)" },
   { icon: "😊", title: "4. Happy Guests", sub: "(Event Completion)" },
 ];
+
+const ServiceProcess = () => {
   return (
+    <section className="process-section">
+      <Container>
+        <div className="text-center mb-5">
+          <h2 className="process-heading">
+            Our <span className="text-gold">Service Process</span>
+          </h2>
+          <p className="process-sub">How we handle your bookings from start to finish:</p>
+        </div>
 
-
-function ServiceProcess() {
-  return (
-    <section className="process">
-     
-      <div className="process__header">
-        <span className="process__bar" />
-        <h2>
-          Our <span>Service Process</span>
-        </h2>
-        <p>How we handle your bookings from start to finish:</p>
-      </div>
-
-      <div className="process__steps">
-        {steps.map((step, i) => (
-          <div className="process__item" key={step.title}>
-            <div className="process__step">
-              <div className="process__icon">{step.icon}</div>
-              <h3>{step.title}</h3>
-              <small>{step.sub}</small>
-            </div>
-            {i < steps.length - 1 && <span className="process__arrow">→</span>}
-          </div>
-        ))}
-      </div>
+        <div className="process-flow">
+          {steps.map((step, idx) => (
+            <React.Fragment key={step.title}>
+              <div className="process-card">
+                <div className="process-circle">{step.icon}</div>
+                <h4 className="process-title">{step.title}</h4>
+                <span className="process-subtitle">{step.sub}</span>
+              </div>
+              {idx < steps.length - 1 && <span className="process-arrow">➔</span>}
+            </React.Fragment>
+          ))}
+        </div>
+      </Container>
     </section>
   );
-}
+};
 
-  )
-}
-
-export default ServiceProcess
+export default ServiceProcess;

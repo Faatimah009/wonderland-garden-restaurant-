@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
 
-function RequestQuote() {
+const RequestQuote = () => {
   const [form, setForm] = useState({
     type: "",
     guests: "",
@@ -14,100 +15,99 @@ function RequestQuote() {
 
   const submit = (e) => {
     e.preventDefault();
-
-    console.log("Quote request:", form);
     setSent(true);
   };
 
   return (
-    <section className="quote">
-      <div
-        className="quote-info"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(10,20,45,.75), rgba(10,20,45,.75)), url(/images/quote-bg.jpg)",
-        }}
-      >
-        <h2>
-          Request a <span>Quote</span>
-        </h2>
-        <p>
-          Tell us about your event and we'll get back to you with a customized
-          quote.
-        </p>
-        <ul className="quote-perks">
-          <li>Fresh Ingredients</li>
-          <li>Professional Staff</li>
-          <li>On-Time Delivery</li>
-        </ul>
-      </div>
+    <section className="quote-section">
+      <Container>
+        <div className="quote-card">
+          {/* Left Side: Info with Banquet Photo */}
+          <div className="quote-info-panel">
+            <div className="gold-accent-line"></div>
+            <h2 className="quote-header">
+              Request a <br />
+              <span className="text-gold">Quote</span>
+            </h2>
+            <p className="quote-subtext">
+              Tell us about your event and we'll get back to you with a customized quote.
+            </p>
 
-      <form className="quote-form" onSubmit={submit}>
-        <label>
-          Event Type
-          <select name="type" value={form.type} onChange={update} required>
-            <option value="">Select Event Type</option>
-            <option>Wedding</option>
-            <option>Corporate Event</option>
-            <option>Birthday / Party</option>
-            <option>Bulk Order</option>
-          </select>
-        </label>
+            <div className="quote-perks-row">
+              <div className="perk-pill">
+                <span>🍃</span> Fresh Ingredients
+              </div>
+              <div className="perk-pill">
+                <span>👨‍🍳</span> Professional Staff
+              </div>
+              <div className="perk-pill">
+                <span>🚚</span> On-Time Delivery
+              </div>
+            </div>
+          </div>
 
-        <label>
-          Estimated Guests
-          <input
-            name="guests"
-            type="number"
-            min="1"
-            placeholder="e.g. 50"
-            value={form.guests}
-            onChange={update}
-            required
-          />
-        </label>
+          {/* Right Side: Form */}
+          <form className="quote-form-panel" onSubmit={submit}>
+            <div className="form-group-custom">
+              <label>Event Type</label>
+              <select name="type" value={form.type} onChange={update} required>
+                <option value="">Select Event Type</option>
+                <option>Wedding</option>
+                <option>Corporate Event</option>
+                <option>Birthday / Party</option>
+                <option>Bulk Order</option>
+              </select>
+            </div>
 
-        <label>
-          Date
-          <input
-            name="date"
-            type="date"
-            value={form.date}
-            onChange={update}
-            required
-          />
-        </label>
+            <div className="form-group-custom">
+              <label>Estimated Guests</label>
+              <input
+                name="guests"
+                type="number"
+                min="1"
+                placeholder="e.g. 50"
+                value={form.guests}
+                onChange={update}
+                required
+              />
+            </div>
 
-        <label>
-          On-Site
-          <input
-            name="location"
-            placeholder="e.g. Ikeja"
-            value={form.location}
-            onChange={update}
-          />
-        </label>
+            <div className="form-group-custom">
+              <label>Date</label>
+              <input name="date" type="date" value={form.date} onChange={update} required />
+            </div>
 
-        <label className="full">
-          Message
-          <textarea
-            name="message"
-            rows="3"
-            placeholder="Tell us about your event, delivery needs or special requests..."
-            value={form.message}
-            onChange={update}
-          />
-        </label>
+            <div className="form-group-custom">
+              <label>On-Site</label>
+              <input
+                name="location"
+                placeholder="e.g. Ikeja"
+                value={form.location}
+                onChange={update}
+              />
+            </div>
 
-        <button type="submit" className="btn full">
-          Get a Quote →
-        </button>
+            <div className="form-group-custom full-width">
+              <label>Message</label>
+              <textarea
+                name="message"
+                rows="3"
+                placeholder="Tell us about your event, delivery needs or special requests..."
+                value={form.message}
+                onChange={update}
+              />
+            </div>
 
-        {sent && (
-          <p className="full success">Thanks! We'll get back to you shortly.</p>
-        )}
-      </form>
+            <button type="submit" className="quote-submit-btn">
+              Get a Quote →
+            </button>
+
+            {sent && <p className="success-msg">Thanks! We'll get back to you shortly.</p>}
+          </form>
+        </div>
+      </Container>
     </section>
   );
-}
+};
+
 export default RequestQuote;
