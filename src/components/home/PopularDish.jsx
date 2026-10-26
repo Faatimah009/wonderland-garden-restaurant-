@@ -1,66 +1,39 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { FaRegStar } from "react-icons/fa";
-import { FaBowlFood } from "react-icons/fa6";
-import { GiChickenOven, GiFrenchFries } from "react-icons/gi";
-import { RiDrinks2Fill } from "react-icons/ri";
+import React from 'react'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import foods from "../../data/food"
+import FoodCard from "../FoodCard"
 
-// FIX: Corrected import paths relative to this file's folder position
-import FoodCard from "../FoodCard";
-import foods from "../../data/food";
+function PopularDish() {
 
-const PopularDishes = () => {
+  const popularFoods = foods.slice(0, 6)
+
   return (
-    <div style={{ display: "flex", gap: "40px" }}>
-      <aside>
-        <ul>
-          <a href="#">
-            <li>
-              <FaRegStar /> Popular
-            </li>
-          </a>
-          <hr />
-          <a href="#">
-            <li>
-              <FaBowlFood /> Jollof Dishes
-            </li>
-          </a>
-          <hr />
-          <a href="#">
-            <li>
-              <GiChickenOven /> Proteins
-            </li>
-          </a>
-          <hr />
-          <a href="#">
-            <li>
-              <GiFrenchFries /> Sides
-            </li>
-          </a>
-          <hr />
-          <a href="#">
-            <li>
-              <RiDrinks2Fill /> Drinks
-            </li>
-          </a>
-        </ul>
-        <hr />
-        <input type="search" placeholder="Search" />
-      </aside>
+     <Container fluid>
+      <Row className='p-5'>
+        <Col md={3}>
+        <img src="/image/homebanner.png" alt="" width="100%" />
+        
+        </Col>
+        <Col md={9}>
+        <section className='title'>
+          <h6>OUR SPECIALS</h6>
+          <h2>Popular Dishes</h2>
+          <p>Fresh Ingredient , Authentic Taste, Always</p>
+        </section>
+        
+        <div className="food-container">
 
-      <main>
-        <div className="menu-card">
-          <div className="food-grid">
-            {foods.map((food) => (
-              <FoodCard key={food.id} food={food} />
-            ))}
-          </div>
+          {popularFoods.map((food) =>(
+            <FoodCard food={food} key={food.id} />
+          ))}
         </div>
-      </main>
-    </div>
-  );
-};
 
-export default PopularDishes;
+        </Col>
+      </Row>
+    </Container>
+  )
+}
+
+export default PopularDish

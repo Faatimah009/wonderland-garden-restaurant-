@@ -6,12 +6,13 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { FaCartShopping } from "react-icons/fa6";
 import wonder from "../assets/Logos/wonder.png";
+import { Link } from "react-router-dom";
 function NavbarMenu({ CartCount = 0 }) {
   return (
     <>
       <Navbar expand="lg" className="bg-black">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand  as={Link} to="/">
             <img src={wonder} alt="Logo" height="70px" width="80px" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -19,18 +20,18 @@ function NavbarMenu({ CartCount = 0 }) {
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <NavDropdown title="Menu" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item as={Link} to="/menu">
                   Local dishes
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item as={Link} to="/menu">
                   Foreign Cuisine
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Dessert</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/menu">Dessert</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/cart" className="d-flex align-item-center gap-2">
+              <Nav.Link as={Link} to="/about">About</Nav.Link>
+              <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+              <Nav.Link as={Link} to="/cart" className="d-flex align-item-center gap-2">
                 <FaCartShopping /> Cart<span className="badge bg-danger"> {CartCount}</span>
               </Nav.Link>
             </Nav>
