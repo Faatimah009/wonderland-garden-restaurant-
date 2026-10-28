@@ -11,7 +11,7 @@ import NavbarMenu from "./components/Navbar"; // Ensure this filename matches yo
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Checkout from "./pages/Checkout";
-import OrderSuccess from "./pages/OrderSuccess.jsx";
+import OrderSuccess from "./pages/OrderSuccess";
 
 const App = () => {
   // Optional: Load cart from localStorage so items don't reset on page refresh
