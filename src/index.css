@@ -647,3 +647,16 @@ select {
 .nav-link:focus {
     color: #F58D1D;
 }
+/* Food card image wrapper and image uniform sizing */
+.food-image-wrapper {
+  width: 100%;
+  height: 200px; /* Adjust this value to your preferred height (e.g., 180px or 200px) */
+  overflow: hidden;
+}
+
+.food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the space neatly without stretching */
+  object-position: center;
+}

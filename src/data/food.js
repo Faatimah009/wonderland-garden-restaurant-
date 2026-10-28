@@ -52,7 +52,7 @@ const foods = [
     name: "Pepperoni Pizza",
     price: 8500,
     category: "Pizza",
-    image: "https://unsplash.com",
+    image: "https://images.unsplash.com/photo-1628840042765-356cda07504e",
     description: "Classic pizza topped with rich tomato sauce, melted mozzarella, and spicy pepperoni."
   },
   {
@@ -60,7 +60,7 @@ const foods = [
     name: "Club Sandwich",
     price: 4000,
     category: "Sandwich",
-    image: "https://unsplash.com",
+    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af",
     description: "Triple-decker sandwich with toasted bread, grilled chicken, egg, lettuce, and mayo."
   },
   {
@@ -68,7 +68,7 @@ const foods = [
     name: "Meat Pie",
     price: 1500,
     category: "Snacks",
-    image: "https://unsplash.com",
+    image: "https://www.bellanaija.com/wp-content/uploads/2025/01/KpwvzvaNC5U-HD.jpg",
     description: "Flaky pastry crust stuffed with a savory, perfectly seasoned minced beef and vegetable filling."
   },
   {
@@ -76,7 +76,7 @@ const foods = [
     name: "Glazed Donuts",
     price: 2000,
     category: "Snacks",
-    image: "https://unsplash.com",
+    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87",
     description: "Soft, fluffy yeast-risen donuts covered in a sweet, classic sugar glaze."
   },
   {
@@ -84,7 +84,7 @@ const foods = [
     name: "French Fries",
     price: 2500,
     category: "Sides",
-    image: "https://unsplash.com",
+    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877",
     description: "Golden, crispy potato fries lightly salted and served with ketchup."
   },
   {
@@ -92,7 +92,7 @@ const foods = [
     name: "Chocolate Milkshake",
     price: 3500,
     category: "Drinks",
-    image: "https://unsplash.com",
+    image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699",
     description: "Rich and creamy milkshake blended with premium chocolate ice cream and topped with whipped cream."
   }
 ];
