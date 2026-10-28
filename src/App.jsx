@@ -20,7 +20,7 @@ const App = () => {
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
-  useEffect(() => {}, [input])(() => {
+  useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 

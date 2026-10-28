@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import foods from "../../data/food"
 import FoodCard from "../FoodCard"
 
-function PopularDish() {
+function PopularDish({onAddToCart}) {
 
   const popularFoods = foods.slice(0, 6)
 
@@ -26,7 +26,7 @@ function PopularDish() {
         <div className="food-container">
 
           {popularFoods.map((food) =>(
-            <FoodCard food={food} key={food.id} />
+            <FoodCard food={food} key={food.id} onAddToCart={onAddToCart} />
           ))}
         </div>
 

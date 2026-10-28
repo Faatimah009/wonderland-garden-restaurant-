@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function NavbarMenu({ CartCount = 0 }) {
   return (
     <>
-      <Navbar expand="lg" className="bg-black">
+      <Navbar sticky="top" expand="lg" className="bg-black">
         <Container>
           <Navbar.Brand  as={Link} to="/">
             <img src={wonder} alt="Logo" height="70px" width="80px" />
