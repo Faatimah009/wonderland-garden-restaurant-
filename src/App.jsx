@@ -12,6 +12,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Checkout from "./pages/Checkout";
 import OrderSuccess from "./pages/OrderSuccess";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import OffersPromotions from "./pages/Offers";
+import Refund from "./pages/Refund";
+import Delivery from "./pages/Delivery";
+import Faqs from "./pages/Faqs";
+
 
 const App = () => {
   // Optional: Load cart from localStorage so items don't reset on page refresh
@@ -59,11 +65,11 @@ const App = () => {
   }
 
   // Calculate total cart count for the navbar badge
-  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+  const CartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <BrowserRouter>
-      <NavbarMenu cartCount={cartCount} />
+      <NavbarMenu CartCount={CartCount} />
       <Routes>
         <Route path="/" element={<Home onAddToCart={addToCart} />} />
         <Route path="/about" element={<About />} />
@@ -84,6 +90,11 @@ const App = () => {
         <Route path="/terms" element={<Terms />} />
         <Route path="/order-success" element={<OrderSuccess />} />
         <Route path="/menu" element={<Menu onAddToCart={addToCart} />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/faqs" element={<Faqs />} />
+        <Route path="/refunds" element={<Refund />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/offer" element={<OffersPromotions />} />
       </Routes>
       <Footer />
     </BrowserRouter>
